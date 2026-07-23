@@ -98,7 +98,8 @@ h1, h2, h3, h4 { text-wrap: balance; line-height: 1.05; }
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
 
-.section { padding-block: 4.5rem; position: relative; }
+.section { padding-block: 4.5rem; position: relative; scroll-margin-top: calc(var(--nav-h) + 14px); }
+.hero { scroll-margin-top: var(--nav-h); }
 @media (min-width: 960px) { .section { padding-block: 7rem; } }
 
 .section-head { max-width: 46rem; margin-bottom: 2.5rem; }
