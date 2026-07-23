@@ -21,8 +21,16 @@
 </style>
 </head>
 <body>
+<div class="splash" data-splash aria-hidden="true">
+  <div class="splash-inner">
+    <div class="splash-glow"></div>
+    <p class="splash-kicker">Parrilla de barrio · San Justo</p>
+    <p class="splash-title">Fuego <em>RESTO</em></p>
+    <span class="splash-line"></span>
+  </div>
+</div>
 <a class="skip-link" href="#main">Saltar al contenido</a>
-<header class="nav is-scrolled" data-nav>
+<header class="nav is-scrolled" data-nav data-nav-solid>
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">Fuego <em>RESTO</em></a>
     <div class="nav-actions">
@@ -48,10 +56,11 @@
 </main>
 <footer class="footer">
   <div class="container footer-bottom">
-    <span>© <span id="y">2026</span> Fuego RESTO.</span>
+    <span>© <span data-year>2026</span> Fuego RESTO.</span>
     <a href="index.html">Volver al inicio</a>
   </div>
 </footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script defer src="lib/manifest.js"></script>
+<script defer src="main.js?v=20260723"></script>
 </body>
 </html>

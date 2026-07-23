@@ -19,6 +19,15 @@
 <link rel="stylesheet" href="styles.css?v=20260723">
 </head>
 <body>
+<div class="splash" data-splash aria-hidden="true">
+  <div class="splash-inner">
+    <div class="splash-glow"></div>
+    <p class="splash-kicker">Parrilla de barrio · San Justo</p>
+    <p class="splash-title">Fuego <em>RESTO</em></p>
+    <span class="splash-line"></span>
+  </div>
+</div>
+
 <a class="skip-link" href="#main">Saltar al contenido</a>
 
 <!-- ============ NAV ============ -->
@@ -27,6 +36,7 @@
     <a href="#inicio" class="nav-logo">Fuego <em>RESTO</em></a>
     <nav class="nav-links" aria-label="Secciones">
       <a class="nav-link" href="#historia">Historia</a>
+      <a class="nav-link" href="#reservar">Reservar</a>
       <a class="nav-link" href="carta.html">Carta</a>
       <a class="nav-link" href="#galeria">Galería</a>
       <a class="nav-link" href="#resenas">Reseñas</a>
@@ -48,6 +58,7 @@
 <div class="mobile-menu" id="mobile-menu" data-open="false">
   <nav class="mobile-menu-links" aria-label="Menú móvil">
     <a href="#historia">Historia</a>
+    <a href="#reservar">Reservar</a>
     <a href="carta.html">Carta</a>
     <a href="#galeria">Galería</a>
     <a href="#resenas">Reseñas</a>
@@ -180,6 +191,50 @@
           <p style="margin-top:.5rem; font-size:.8rem; color:var(--cream-3);">Por ahora no tenemos delivery propio: los pedidos se retiran en el local.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ RESERVAS ============ -->
+  <section class="section" id="reservar" style="background:var(--bg-2);">
+    <div class="container">
+      <div class="section-head center">
+        <p class="kicker">Reservá tu mesa</p>
+        <h2>Te esperamos en Fuego RESTO</h2>
+        <p class="lede" style="margin-top:.6rem;">Completá tus datos y se abre WhatsApp con el mensaje ya armado — vos solo tenés que enviarlo y te confirmamos por ese medio.</p>
+      </div>
+      <form class="reserve-form" data-reserve-form novalidate>
+        <div class="field-grid">
+          <div class="field">
+            <label for="r-nombre">Nombre</label>
+            <input type="text" id="r-nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre">
+          </div>
+          <div class="field">
+            <label for="r-telefono">Tu WhatsApp</label>
+            <input type="tel" id="r-telefono" name="telefono" required autocomplete="tel" placeholder="Ej: 11 2345 6789">
+          </div>
+          <div class="field">
+            <label for="r-fecha">Fecha</label>
+            <input type="date" id="r-fecha" name="fecha" required>
+          </div>
+          <div class="field">
+            <label for="r-hora">Hora</label>
+            <input type="time" id="r-hora" name="hora" required>
+          </div>
+          <div class="field">
+            <label for="r-personas">Cantidad de personas</label>
+            <input type="number" id="r-personas" name="personas" min="1" max="30" required placeholder="Ej: 4">
+          </div>
+          <div class="field field-full">
+            <label for="r-comentario">Comentario (opcional)</label>
+            <textarea id="r-comentario" name="comentario" rows="2" placeholder="Alguna preferencia, cumpleaños, alergia, etc."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-whatsapp reserve-submit">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.6-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.6-.2.2-.4.4-.2.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.6Z"/></svg>
+          Enviar reserva por WhatsApp
+        </button>
+        <p class="reserve-note">No es una reserva automática: te la confirmamos por WhatsApp apenas la recibimos. Si preferís, también podés <a href="tel:+5493756498460" style="color:var(--gold);">llamarnos directo</a>.</p>
+      </form>
     </div>
   </section>
 
