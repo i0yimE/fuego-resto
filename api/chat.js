@@ -8,7 +8,7 @@ const SYSTEM_PROMPT = [
   "Av. Juan Florio 3392, San Justo, La Matanza, Provincia de Buenos Aires.",
   "Datos reales del local (no inventes otros):",
   "- Teléfono/WhatsApp: 03756 15-49-8460",
-  "- Horarios: Lunes a Miércoles 8:00 a 00:00, Jueves cerrado, Viernes 8:00 a 00:00, Sábado y Domingo 9:00 a 1:00.",
+  "- Horarios: Lunes, Miércoles, Jueves y Domingo 8:00 a 00:00. Viernes y Sábado 9:00 a 1:00. Martes cerrado.",
   "- Rango de precio: $20.000 a $60.000 por persona. Valor del cubierto: $2.000 por persona.",
   "- Rating: 4.5/5 en Google con 205 opiniones.",
   "- Servicios: consumo en el lugar, para llevar, pedidos online por WhatsApp (sin delivery propio).",
