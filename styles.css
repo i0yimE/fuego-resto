@@ -439,6 +439,13 @@ h3 { font-weight: 600; font-size: clamp(1.2rem, 2.4vw, 1.5rem); }
 }
 .menu-cat-pending a { color: var(--gold); }
 .menu-cat-pending a:hover { text-decoration: underline; }
+.menu-subhead {
+  font-family: var(--display); text-transform: uppercase; letter-spacing: .05em;
+  font-size: .78rem; color: var(--cream-3);
+  margin-top: 1.6rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  margin-bottom: .4rem;
+}
+.menu-cat > .menu-subhead:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
 
 /* =============================================================
    Promos
