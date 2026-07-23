@@ -415,6 +415,32 @@ h3 { font-weight: 600; font-size: clamp(1.2rem, 2.4vw, 1.5rem); }
 .dish-card .dish-num { font-family: var(--display); font-size: .8rem; color: var(--cream-3); letter-spacing: .08em; }
 
 /* =============================================================
+   Carta completa (menu-list)
+   ============================================================= */
+.menu-banner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
+  background: linear-gradient(135deg, var(--bg-3), var(--bg-2));
+  border: 1px solid var(--line); border-radius: 16px;
+  padding: 1.2rem 1.4rem; margin-bottom: 2.6rem;
+}
+.menu-banner p { font-size: .9rem; color: var(--cream-2); max-width: 48ch; }
+.menu-cat { margin-bottom: 3rem; }
+.menu-cat-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.1rem; border-bottom: 1px solid var(--line); padding-bottom: .7rem; }
+.menu-cat-head h3 { text-transform: none; letter-spacing: 0; color: var(--gold); font-size: 1.15rem; }
+.menu-cat-note { font-size: .78rem; color: var(--cream-3); }
+.menu-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-block: .6rem; border-bottom: 1px dashed var(--line); }
+.menu-row:last-child { border-bottom: 0; }
+.menu-row-name { color: var(--cream-2); font-size: .95rem; }
+.menu-row-desc { display: block; font-size: .78rem; color: var(--cream-3); margin-top: .15rem; }
+.menu-row-price { font-family: var(--display); color: var(--cream); white-space: nowrap; font-size: .92rem; }
+.menu-cat-pending {
+  border: 1px dashed var(--line-2); border-radius: 14px; padding: 1.3rem;
+  font-size: .88rem; color: var(--cream-3);
+}
+.menu-cat-pending a { color: var(--gold); }
+.menu-cat-pending a:hover { text-decoration: underline; }
+
+/* =============================================================
    Promos
    ============================================================= */
 .promos {
