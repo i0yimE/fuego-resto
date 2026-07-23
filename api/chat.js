@@ -73,19 +73,26 @@ module.exports = async (req, res) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             contents,
-            generationConfig: { maxOutputTokens: 300, temperature: 0.6 }
+            // maxOutputTokens alto a propósito: los modelos "thinking" (2.5/3.x)
+            // consumen buena parte del presupuesto en razonamiento interno antes
+            // de escribir la respuesta visible — con un límite bajo la respuesta
+            // sale cortada a mitad de frase (finishReason MAX_TOKENS).
+            generationConfig: { maxOutputTokens: 1024, temperature: 0.6 }
           })
         }
       );
       const data = await r.json();
       if (r.ok) {
-        const parts = data && data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts;
+        const candidate = data && data.candidates && data.candidates[0];
+        const parts = candidate && candidate.content && candidate.content.parts;
         const text = Array.isArray(parts) ? parts.map((p) => p.text || "").join("").trim() : "";
-        if (text) {
+        if (text && candidate.finishReason !== "MAX_TOKENS") {
           res.status(200).json({ reply: text, model });
           return;
         }
-        lastError = "Respuesta vacía de " + model;
+        lastError = text
+          ? "Respuesta cortada (MAX_TOKENS) en " + model
+          : "Respuesta vacía de " + model;
       } else {
         lastError = (data && data.error && data.error.message) || ("HTTP " + r.status + " en " + model);
       }
